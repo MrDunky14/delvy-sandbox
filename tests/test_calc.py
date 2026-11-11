@@ -1,5 +1,5 @@
 import pytest
-from calc import add, clamp, divide, subtract
+from calc import add, clamp, divide, is_positive, subtract
 
 
 def test_add() -> None:
@@ -24,3 +24,8 @@ def test_clamp() -> None:
     assert clamp(15, 0, 10) == 10
     assert clamp(0, 0, 10) == 0
     assert clamp(10, 0, 10) == 10
+
+
+def test_is_positive_weak() -> None:
+    # Weak oracle: passes CI but survives operator mutations (> -> >= / <= / ==)
+    assert isinstance(is_positive(5), bool)
