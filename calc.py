@@ -18,3 +18,7 @@ def clamp(value: int, low: int, high: int) -> int:
     if value > high:
         return high
     return value
+
+
+def multiply(a: int, b: int) -> int:
+    return a * b
