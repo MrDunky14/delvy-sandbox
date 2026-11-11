@@ -1,5 +1,5 @@
 import pytest
-from calc import add, clamp, divide, subtract
+from calc import add, clamp, divide, multiply, subtract
 
 
 def test_add() -> None:
@@ -24,3 +24,9 @@ def test_clamp() -> None:
     assert clamp(15, 0, 10) == 10
     assert clamp(0, 0, 10) == 0
     assert clamp(10, 0, 10) == 10
+
+
+def test_multiply() -> None:
+    assert multiply(3, 4) == 12
+    assert multiply(-2, 5) == -10
+    assert multiply(0, 99) == 0
