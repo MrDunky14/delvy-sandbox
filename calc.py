@@ -18,3 +18,11 @@ def clamp(value: int, low: int, high: int) -> int:
     if value > high:
         return high
     return value
+
+
+def square(x: int) -> int:
+    return x * x
+
+
+def cube(x: int) -> int:
+    return x * x * x

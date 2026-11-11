@@ -1,5 +1,5 @@
 import pytest
-from calc import add, clamp, divide, subtract
+from calc import add, clamp, cube, divide, square, subtract
 
 
 def test_add() -> None:
@@ -24,3 +24,13 @@ def test_clamp() -> None:
     assert clamp(15, 0, 10) == 10
     assert clamp(0, 0, 10) == 0
     assert clamp(10, 0, 10) == 10
+
+
+def test_square() -> None:
+    assert square(3) == 9
+    assert square(-4) == 16
+
+
+def test_cube() -> None:
+    assert cube(2) == 8
+    assert cube(-3) == -27
