@@ -18,3 +18,7 @@ def clamp(value: int, low: int, high: int) -> int:
     if value > high:
         return high
     return value
+
+
+def is_positive(n: int) -> bool:
+    return n > 0
